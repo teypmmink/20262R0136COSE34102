@@ -101,3 +101,35 @@ TLB 미스는 변환 정보가 캐시에 없다는 뜻이며, 페이지가 메�
 
 폴링은 장치 상태를 반복 확인하고, 인터럽트는 장치가 처리가 필요함을 CPU에 알리는 방식입니다.
 DMA는 CPU가 모든 데이터를 직접 복사하는 부담을 줄이지만, 전송 준비와 완료 처리는 여전히 필요합니다.
+
+## Git 기록 확인 방법
+
+변경 내용을 검토한 뒤 필요한 파일만 스테이징하고 커밋합니다.
+커밋 메시지는 어떤 내용을 추가하거나 수정했는지 알 수 있도록 작성합니다.
+
+```sh
+git diff -- README.md
+git add README.md
+git commit -m "docs: update operating systems notes"
+git push origin main
+```
+
+다음 명령으로 현재 브랜치의 커밋 수, 변경 이력과 추적 파일을 확인할 수 있습니다.
+
+```sh
+git rev-list --count HEAD
+git log --oneline
+git ls-files
+git status --short
+```
+
+## 과제 제출 전 확인 사항
+
+- 저장소 이름이 `20262R0136COSE34102`인지 확인합니다.
+- 저장소 공개 범위가 Public인지 확인합니다.
+- GitHub의 기본 브랜치에서 README.md와 10회 이상의 커밋이 보이는지 확인합니다.
+- Project #1·#2 소스 코드와 토큰·비밀번호 등 비밀 정보가 포함되지 않았는지 확인합니다.
+- 제공된 Google Form에 본인의 정보와 위 저장소 URL을 제출합니다.
+- 이전 설문을 제출했어도 저장소 이름을 변경했다면 변경된 URL로 다시 제출합니다.
+
+커밋 수 충족과 Google Form 제출은 별개입니다. 이 README는 설문 제출 완료를 의미하지 않습니다.
